@@ -7,6 +7,12 @@ Minimal WPNuxt starter with plain CSS and a WordPress Playground blueprint. No U
 - [Documentation](https://wpnuxt.com/getting-started/installation)
 - [Launch WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wpnuxt/starter-minimal/main/blueprint.json) - spin up a WPGraphQL-ready WordPress instance in your browser
 
+## Quick Start
+
+```bash [Terminal]
+npm create wpnuxt@latest -- -t minimal
+```
+
 ## Setup
 
 Make sure to install the dependencies:
