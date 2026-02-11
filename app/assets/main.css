@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+nav a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a.router-link-active {
+  color: #2563eb;
+}
+
+h1 {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.posts {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.posts li {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+}
+
+.posts a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding-bottom: 0.75rem;
+}
+
+.posts a:hover {
+  color: #2563eb;
+}
+
+.posts img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.posts span,
+.posts small,
+.posts em {
+  display: block;
+  padding: 0 0.75rem;
+}
+
+.posts small {
+  font-weight: 400;
+  color: #555;
+  font-size: 0.875rem;
+}
+
+.posts em {
+  color: #2563eb;
+  font-style: normal;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+article h2 {
+  font-size: 1.375rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+article p {
+  margin-bottom: 1rem;
+}
+
+article ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+article pre {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+article code {
+  font-size: 0.875em;
+}
+
+article a {
+  color: #2563eb;
+}
