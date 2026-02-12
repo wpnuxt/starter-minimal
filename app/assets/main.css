@@ -30,7 +30,7 @@ nav a {
 
 nav a:hover,
 nav a.router-link-active {
-  color: #2563eb;
+  color: #9c8e1b;
 }
 
 h1 {
@@ -62,7 +62,7 @@ h1 {
 }
 
 .posts a:hover {
-  color: #2563eb;
+  color: #9c8e1b;
 }
 
 .posts img {
@@ -87,7 +87,7 @@ h1 {
 }
 
 .posts em {
-  color: #2563eb;
+  color: #9c8e1b;
   font-style: normal;
   font-size: 0.875rem;
   margin-top: 0.5rem;
@@ -122,5 +122,5 @@ article code {
 }
 
 article a {
-  color: #2563eb;
+  color: #9c8e1b;
 }

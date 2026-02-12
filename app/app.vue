@@ -4,7 +4,10 @@ const { data: menu } = await useMenu({ name: 'main' })
 
 <template>
   <div>
-    <nav v-if="menu">
+    <nav>
+      <NuxtLink to="/">
+        <AppLogo />
+      </NuxtLink>
       <NuxtLink
         v-for="item in menu"
         :key="item.uri"
