@@ -9,14 +9,21 @@
     "blueprint": "node ./blueprint/start.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@wpnuxt/core": "2.0.0-beta.3",
-    "nuxt": "^4.3.1",
-    "vue": "^3.5.28",
-    "vue-router": "^5.0.2",
-    "@wpnuxt/auth": "latest"
+    "@wpnuxt/core": "2.2.2",
+    "nuxt": "^4.4.2"
   },
-  "packageManager": "pnpm@10.29.2+sha512.bef43fa759d91fd2da4b319a5a0d13ef7a45bb985a3d7342058470f9d2051a3ba8674e629672654686ef9443ad13a82da2beb9eeb3e0221c87b8154fff9d74b8"
+  "devDependencies": {
+    "@nuxt/eslint": "^1.15.2",
+    "@tailwindcss/vite": "^4.0.0",
+    "@typescript-eslint/parser": "^8.58.2",
+    "tailwindcss": "^4.0.0",
+    "vue-eslint-parser": "^10.4.0"
+  },
+  "packageManager": "pnpm@10.33.0"
 }

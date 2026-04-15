@@ -1,7 +1,18 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@wpnuxt/core'],
-  css: ['~/assets/main.css']
+  modules: ['@wpnuxt/core', '@nuxt/eslint'],
+  css: ['~/assets/main.css'],
+  vite: {
+    plugins: [tailwindcss()]
+  },
+  wpNuxt: {
+    cache: {
+      enabled: true,
+      maxAge: 300,
+      swr: true
+    }
+  }
 })

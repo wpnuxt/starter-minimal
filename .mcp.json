@@ -3,6 +3,10 @@
     "wpnuxt": {
       "type": "http",
       "url": "https://wpnuxt.com/mcp"
+    },
+    "nuxt": {
+      "type": "http",
+      "url": "https://nuxt.com/mcp"
     }
   }
 }
