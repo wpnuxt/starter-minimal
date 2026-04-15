@@ -1,12 +1,18 @@
 <script setup lang="ts">
-const { data: posts, pending } = await usePosts()
+useSeoMeta({
+  title: 'Posts',
+  ogTitle: 'All Posts',
+  description: 'Browse all posts from WordPress'
+})
+
+const { data, pending, loadMore, pageInfo } = await usePostsWithPagination({ first: 6 })
 </script>
 
 <template>
   <div>
     <h1>Posts</h1>
-    <ul v-if="posts" class="posts">
-      <li v-for="post in posts" :key="post.uri">
+    <ul v-if="data" class="posts">
+      <li v-for="post in data" :key="post.uri">
         <NuxtLink :to="post.uri">
           <img
             v-if="post.featuredImage?.node"
@@ -25,5 +31,13 @@ const { data: posts, pending } = await usePosts()
     <div v-else>
       <p>No posts found</p>
     </div>
+    <button
+      v-if="pageInfo?.hasNextPage"
+      class="mt-8 px-6 py-3 bg-(--color-wpnuxt) text-white border-none rounded-md cursor-pointer font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+      :disabled="pending"
+      @click="loadMore"
+    >
+      {{ pending ? 'Loading...' : 'Load More' }}
+    </button>
   </div>
 </template>

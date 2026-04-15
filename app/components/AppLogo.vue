@@ -2,8 +2,8 @@
 const props = defineProps<{
   wpColor?: string
 }>()
-const wpLight = props.wpColor ? props.wpColor : 'black'
-const wpDark = props.wpColor ? props.wpColor : 'white'
+const wpLight = computed(() => props.wpColor ?? 'black')
+const wpDark = computed(() => props.wpColor ?? 'white')
 </script>
 
 <template>
@@ -29,6 +29,6 @@ html.dark .wpnuxt-logo-wp {
   font-family: ui-serif, Times, serif;
 }
 .wpnuxt-logo-nuxt {
-  color: #9c8e1b;
+  color: var(--color-wpnuxt);
 }
 </style>

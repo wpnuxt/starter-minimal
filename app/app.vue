@@ -1,5 +1,11 @@
 <script setup lang="ts">
+const { data: settings } = await useGeneralSettings()
 const { data: menu } = await useMenu({ name: 'main' })
+
+useHead({
+  titleTemplate: (title) => title ? `${title} — ${settings.value?.title || 'WPNuxt'}` : settings.value?.title || 'WPNuxt',
+  link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+})
 </script>
 
 <template>

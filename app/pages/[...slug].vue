@@ -3,6 +3,11 @@ const route = useRoute()
 const uri = computed(() => `/${(route.params.slug as string[]).join('/')}/`)
 
 const { data: node, pending } = await useNodeByUri({ uri: uri.value })
+
+useSeoMeta({
+  title: () => node.value?.title || 'Loading...',
+  ogTitle: () => node.value?.title
+})
 </script>
 
 <template>
