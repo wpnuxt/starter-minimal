@@ -1,0 +1,13 @@
+query PostsWithPagination($first: Int = 10, $after: String) {
+  posts(first: $first, after: $after) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      endCursor
+      startCursor
+    }
+    nodes {
+      ...Post
+    }
+  }
+}
