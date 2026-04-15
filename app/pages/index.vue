@@ -33,7 +33,7 @@ const { data, pending, loadMore, pageInfo } = await usePostsWithPagination({ fir
     </div>
     <button
       v-if="pageInfo?.hasNextPage"
-      class="mt-8 px-6 py-3 bg-(--color-wpnuxt) text-white border-none rounded-md cursor-pointer font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+      class="mt-8 px-4 py-2 bg-(--color-wpnuxt) text-white border-none rounded-md cursor-pointer font-medium disabled:opacity-60 disabled:cursor-not-allowed"
       :disabled="pending"
       @click="loadMore"
     >
